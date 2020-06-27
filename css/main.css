@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --blue-color:#36c;
+    --font-gray-color:#54595d;
+    --background-gray-color: #f8f9fa;
+    --border-gray-color: #a2a9b1;
+    --span-gray-color: #a2a9b186;
+    --border-hover-gray-color:#72777d;
+    --blue-focus-color:rgb(51, 102, 204);
+    --blue-hover-color: #447ff5;
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body .wikipedia-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    padding-top: 50px;
+    background-color: white;
+}
+
+body .wikipedia-header .wikipedia-title{
+    width: 170px;
+    height: auto;
+}
+
+body .wikipedia-header p {
+    margin-top: 0.5%;
+}
+
+
+main .wikipedia-logo {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1.25%;
+}
+
+
+main .wikipedia-logo .wikipedia-logo-image{
+    width: 200px;
+    height: auto;
+}
+
+main .wikipedia-logo .languages-container{
+    display: grid;
+    grid-template-columns: 35px 25px 25px 25px 25px 35px 35px 70px 70px 35px 35px 25px 25px 25px 25px 35px;
+    grid-template-rows: repeat(5, 50px);
+    grid-row-gap: 20px;
+}
+
+/* Sección Izquierda */
+main .wikipedia-logo .languages-container .link-1{
+    grid-row: 1/2;
+    grid-column: 3/8;
+}
+
+main .wikipedia-logo .languages-container .link-2{
+    grid-row: 2/3;
+    grid-column: 1/7;
+}
+
+main .wikipedia-logo .languages-container .link-3{
+    grid-row: 3/4;
+    grid-column: 1/6;
+}
+
+main .wikipedia-logo .languages-container .link-4{
+    grid-row: 4/5;
+    grid-column: 2/7;
+}
+
+main .wikipedia-logo .languages-container .link-5{
+    grid-row: 5/6;
+    grid-column: 3/8;
+}
+
+
+main .wikipedia-logo .wikipedia-logo-image-container{
+    background-image: url("../images/Wikipedia-logo.png");
+    background-position: center;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    grid-row: 1/6;
+    grid-column: 6/12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Sección Derecha */
+main .wikipedia-logo .languages-container .link-6{
+    grid-row: 1/2;
+    grid-column: 10/15;
+}
+
+main .wikipedia-logo .languages-container .link-7{
+    grid-row: 2/3;
+    grid-column: 11/16;
+}
+
+main .wikipedia-logo .languages-container .link-8{
+    grid-row: 3/4;
+    grid-column: 12/17;
+}
+
+main .wikipedia-logo .languages-container .link-9{
+    grid-row: 4/5;
+    grid-column: 11/16;
+}
+
+main .wikipedia-logo .languages-container .link-10{
+    grid-row: 5/6;
+    grid-column: 10/15;
+}
+
+main .wikipedia-logo .languages-container a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0;
+}
+
+main .wikipedia-logo .languages-container a h2{
+    color: var(--blue-color);
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+main .wikipedia-logo .languages-container a p{
+    color: var(--font-gray-color);
+    font-size: 13px;
+}
+
+main .wikipedia-logo .languages-container a:focus{
+    outline: 1px solid;
+    outline-color: var(--blue-focus-color);
+}
+
+main .wikipedia-logo .languages-container a h2:hover{
+    text-decoration: underline;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 35%;
+    padding-top: 20px;
+}
+
+section .search-bar-container{
+    width: 100%;
+    border: 1px solid var(--border-gray-color);
+    border-right: none;
+    border-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar .search-bar-button{
+    padding: 8px;
+    border: none;
+    border-radius: 2px ;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--blue-color);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.search-bar .search-bar-button:hover{
+    background-color: var(--blue-hover-color);
+}
+
+
+section .search-bar-container:hover{
+    border-color: var(--border-hover-gray-color);
+}
+section .search-bar-container:focus{
+    outline: 1px solid;
+    outline-color: var(--blue-focus-color);
+}
+
+section .search-bar-container .search-bar-input{
+    border:none;
+    outline: none;
+    padding: 12px 8px;
+}
+
+section .search-bar-container .search-bar-input[type="text"]{
+    font-size: 16px;
+    color: var(--border-gray-color);
+    font-family:'Roboto', sans-serif;
+}
+
+section .search-bar-container .search-bar-select{
+    border: none;
+    padding: 7px 0;
+    margin-right: 5px;
+    color: var(--font-gray-color);
+    font-family:'Roboto', sans-serif;
+}
+
+section .search-bar-container .search-bar-select:focus{
+    outline: 1px solid var(--blue-focus-color);
+}
+
+.language-button .language-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 35%;
+    padding-top: 30px;
+}
+
+.language-button .language-button-container span{
+    border: 1px solid var(--span-gray-color);
+    padding: 0 55px;
+    margin: 0 10px;
+
+}
+
+.language-button .language-button-container .language-button-division{
+    border: 1px solid var(--border-gray-color);
+    background-color: var(--background-gray-color);
+    border-radius: 2px;
+    padding: 0 20px;
+    color: var(--blue-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-button .language-button-container .language-button-division select{
+    border: none;
+    padding: 7px 0;
+    margin-right: 5px;
+    font-family:'Roboto', sans-serif;
+    color: var(--blue-color);
+    font-weight: bold;
+    padding-left: 5px;
+    background-color: var(--background-gray-color);
+}
+
+.language-button .language-button-container .language-button-division select:focus{
+    outline: none;
+}
+
+.wikisites {
+    width: 88%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    margin-top: 36px;
+    border-top: 1px solid var(--span-gray-color);
+    font-family:'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.wikisites .container-wikisites{
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 10%;
+}
+
+.wikisites .container-wikisites .wikimedia{
+    grid-column: 1/2;
+    grid-row: 1/2 ;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 20px 20px;
+    text-decoration: none;
+    color: var(--font-gray-color);
+    padding-top: 2.5%;
+    padding-bottom: 5%;
+    padding-right: 10%;
+}
+
+.wikisites .container-wikisites .wikipedia-app{
+    grid-column: 1/2;
+    grid-row: 2/5;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    text-decoration: none;
+    color: var(--font-gray-color);
+    padding-top: 2.5%;
+    padding-right: 5%;
+    background-color: var(--background-gray-color);
+}
+
+.wikisites .container-wikisites div img{
+    grid-column: 1/2;
+    grid-row: 1/3 ;
+    justify-self: center;
+    width: 35px;
+    height: auto;
+}
+
+
+.wikisites .container-wikisites .wikipedia-app .wikipedia-app-icon{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 35px;
+    height: auto;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.493);
+    border-radius: 2px;
+}
+
+.wikisites .container-wikisites .wikipedia-app .wikipedia-app-title{
+    grid-column: 2/4;
+    grid-row: 1/2;
+
+}
+
+.wikisites .container-wikisites .wikipedia-app .wikipedia-app-text{
+    grid-column: 2/4;
+    grid-row: 2/3;
+
+}
+
+.wikisites .container-wikisites .wikipedia-app a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.wikisites .container-wikisites .wikipedia-app a .google-play-store-button{
+    width: 125px;
+    height: auto;
+}
+
+.wikisites .container-wikisites .wikipedia-app a .app-store-button{
+    width: 125px;
+    height: auto;
+}
+
+
+.wikisites .container-wikisites a{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 20px 20px;
+    text-decoration: none;
+    color: var(--font-gray-color);
+}
+
+.wikisites .container-wikisites a:focus{
+    border: 1px solid var(--blue-focus-color);
+}
+
+.wikisites .container-wikisites a h3{
+    font-size: 13px;
+    font-weight: 100;
+    color: var(--blue-color);
+    
+}
+
+
+.wikisites .container-wikisites a .wikisite-title{
+    grid-column: 2/3;
+    grid-row: 1/2 ;
+} 
+
+.wikisites .container-wikisites a .wikisite-text{
+    grid-column: 2/3;
+    grid-row: 2/3 ;
+} 
+
+.wikisites .container-wikisites a img{
+    grid-column: 1/2;
+    grid-row: 1/3 ;
+    align-self: center;
+    justify-self: center;
+    width: 35px;
+    height: auto;
+}
+
+/*Commons*/
+.wikisites .container-wikisites .commons{
+    grid-column: 2/3;
+    grid-row: 1/2 ;
+}
+
+/*Wikilibros*/
+.wikisites .container-wikisites .wikilibros{
+    grid-column: 2/3;
+    grid-row: 2/3 ;
+}
+
+/*Wikiversidad*/
+.wikisites .container-wikisites .wikiversidad{
+    grid-column: 2/3;
+    grid-row: 3/4 ;
+}
+
+/*Wikisource*/
+.wikisites .container-wikisites .wikisource{
+    grid-column: 2/3;
+    grid-row: 4/5 ;
+}
+
+/*Wikiviajes*/
+.wikisites .container-wikisites .wikiviajes{
+    grid-column: 3/4;
+    grid-row: 1/2 ;
+}
+
+/*Wikinoticias*/
+.wikisites .container-wikisites .wikinoticias{
+    grid-column: 3/4;
+    grid-row: 2/3 ;
+}
+
+.wikisites .container-wikisites a .wikinoticas-icon{
+    width: 50px;
+    height: auto;
+}
+
+/*Wikiquotes*/
+.wikisites .container-wikisites .wikiquotes{
+    grid-column: 3/4;
+    grid-row: 3/4 ;
+}
+
+/*Wikispecies*/
+.wikisites .container-wikisites .wikispecies{
+    grid-column: 3/4;
+    grid-row: 4/5 ;
+}
+
+/*Wikcionario*/
+.wikisites .container-wikisites .wikcionario{
+    grid-column: 4/5;
+    grid-row: 1/2 ;
+}
+
+/*Wikidata*/
+.wikisites .container-wikisites .wikidata{
+    grid-column: 4/5;
+    grid-row: 2/3 ;
+}
+
+/*Mediawiki*/
+.wikisites .container-wikisites .mediawiki{
+    grid-column: 4/5;
+    grid-row: 3/4 ;
+}
+
+.wikisites .container-wikisites a .mediawiki-icon{
+    width: 45px;
+    height: auto;
+}
+
+/*Meta-Wiki*/
+.wikisites .container-wikisites .meta-wiki{
+    grid-column: 4/5;
+    grid-row: 4/5 ;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+
+footer .footer-nav{
+    display: flex;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: var(--font-gray-color);
+    margin-top: 30px;
+}
+
+footer .footer-nav li{
+    margin: 0 2px;
+}
+
+footer .footer-nav li a{
+    text-decoration: none;
+    color: var(--blue-color);
+}
+
+
+footer .footer-nav li a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 480px){
+
+}
+
+
