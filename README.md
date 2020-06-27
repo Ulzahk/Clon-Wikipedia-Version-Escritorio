@@ -1,0 +1,1 @@
+# Clon-Wikipedia-Version-Escritorio
